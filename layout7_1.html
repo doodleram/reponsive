@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>layout5</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    body {border-color: #e3f2fd;}
+    #wrap {width: 1000px; margin: 0 auto;}
+    .header {width: 100%; height: 50px; background: #81d4fa;}
+    .banner {width: 100%; height: 250px; background: #4fc3f7;}
+    .content1 {overflow: hidden;}
+    .content1 .nav {float: left; width: 33.3333%; height: 400px; background: #29b6f6;}
+    .content1 .acticle2 {float: left; width: 66.6667%; height: 200px; background: #039be5;}
+    .content1 .acticle3 {float: left; width: 66.6667%; height: 200px; background: #0091ea;}
+    .content2 {overflow: hidden;}
+    .content2 .con1 {float: left; width: 33.3333%; height: 250px; background: #0288d1;}
+    .content2 .con2 {float: left; width: 33.3333%; height: 250px; background: #0277bd;}
+    .content2 .con3 {float: left; width: 33.3333%; height: 250px; background: #01579b;}
+    .content3 {overflow: hidden; width: 90%; padding: 5%; background: #039be5;}
+    .content3 article {float:left; width: 23%; margin: 1%; height: 170px; background: #0277bd; border-radius: 5px;}
+    .footer {width: 100%; height: 50px; background: #4fc3f7;}
+    
+    /* 화면 너비 0 ~ 1200px */
+    @media (max-width: 1220px){
+      #wrap {width: 100%;}
+    }
+    /* 화면 너비 0 ~ 960px */
+    @media (max-width: 960px){
+      .content2 .con1 {width: 50%;}
+      .content2 .con2 {width: 50%;}
+      .content2 .con3 {display: none;}
+      .content3 article {width: 31.3333%;}
+      .content3 .article_square4 {display: none;}  
+    }
+     /* 화면 너비 0 ~ 768px */
+    @media (max-width: 768px){
+      .content2 .con1 {width: 100%; height: 150px;}
+      .content2 .con2 {width: 100%; height: 150px;}
+    }
+     /* 화면 너비 0 ~ 480px */
+    @media (max-width: 480px){
+      .content1 .nav {width: 100%; height: 100px;}
+      .content1 .acticle2 {width: 100%; height: 150px;}
+      .content1 .acticle3 {width: 100%; height: 150px;}
+      .content3 article {width: 98%; border-radius: 5px;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header class="header"></header>
+    <section class="banner"></section>
+    <section class="content1">
+      <nav class="nav"></nav>
+      <acticle class="acticle2"></acticle>
+      <acticle class="acticle3"></acticle>
+    </section>
+    <section class="content2">
+      <acticle class="con1"></acticle>
+      <acticle class="con2"></acticle>
+      <acticle class="con3"></acticle>
+    </section>
+    <section class="content3">
+      <article class="article_square1"></article>
+      <article class="article_square2"></article>
+      <article class="article_square3"></article>
+      <article class="article_square4"></article>
+    </section>
+    <footer class="footer"></footer>
+  </div>
+</body>
+</html>
